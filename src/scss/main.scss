@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;500;600;700&family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&display=swap");
+
 /* Box sizing rules */
 *,
 *::before,
@@ -63,23 +66,40 @@ select {
     scroll-behavior: initial;
   }
 }
-
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 300;
+  font-family: "Josefin Sans", sans-serif;
+}
+p,
+button {
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
+}
 .hero-header {
   background-image: url(/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
   padding: 1.5rem;
+  transition: 0.4s;
 
   ul {
     color: #fff;
   }
   h1 {
     color: #fff;
-    font-family: 40px;
+    font-size: 40px;
     line-height: 38px;
     padding: 24px;
     border: 2px solid white;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    min-width: 320px;
+    max-width: 600px;
   }
   .nav-wrapper {
     display: flex;
@@ -108,6 +128,7 @@ button {
   transition: all 0.5s ease-in-out;
   z-index: 1001;
 }
+
 .menu-btn-burger,
 .menu-btn-burger::before,
 .menu-btn-burger::after {
@@ -170,14 +191,19 @@ button {
     margin: 0;
     padding: 0;
     text-transform: uppercase;
+    text-align: left;
+    font-weight: 300;
+    font-family: "Josefin Sans", sans-serif;
+
     li {
       margin-block: 1rem;
     }
   }
 }
 .main-wrapper {
-  margin: 48px;
+  margin: 24px;
   .description {
+    margin: 24px;
     h2 {
       text-transform: uppercase;
       text-align: center;
@@ -192,40 +218,78 @@ button {
     }
   }
 }
+
+.Creations {
+  color: black;
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    button {
+      text-transform: uppercase;
+      text-align: center;
+      border: 1px solid black;
+      padding: 0.5rem 3rem;
+    }
+  }
+}
 .grid-container {
-  color: white;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, minmax(120px, 1fr));
+  gap: 1.5rem;
+  margin-top: 48px;
+  margin-bottom: 34px;
+
   h2 {
     text-align: center;
     text-transform: uppercase;
   }
   h3 {
     text-transform: uppercase;
+    color: white;
+    max-width: 100px;
   }
-
   .grid-box {
-    background-image: url(/images/mobile/image-deep-earth.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  .grid-box:nth-of-type(2) {
-    background-image: url(/images/mobile/image-night-arcade.jpg);
-  }
-  .grid-box:nth-of-type(3) {
-    background-image: url(/images/mobile/image-soccer-team.jpg);
-  }
-  .grid-box:nth-of-type(4) {
-    background-image: url(/images/mobile/image-grid.jpg);
-  }
-  .grid-box:nth-of-type(5) {
-    background-image: url(/images/mobile/image-from-above.jpg);
-  }
-  .grid-box:nth-of-type(6) {
-    background-image: url(/images/mobile/image-pocket-borealis.jpg);
-  }
-  .grid-box:nth-of-type(7) {
-    background-image: url(/images/mobile/image-interactive.jpg);
-  }
-  .grid-box:nth-of-type(8) {
-    background-image: url(/images/mobile/image-fisheye.jpg);
-  }
+}
+
+.grid-box:nth-of-type(1) {
+  background-image: url(/images/mobile/image-deep-earth.jpg);
+}
+
+.grid-box:nth-of-type(2) {
+  background-image: url(/images/mobile/image-night-arcade.jpg);
+}
+.grid-box:nth-of-type(3) {
+  background-image: url(/images/mobile/image-soccer-team.jpg);
+}
+.grid-box:nth-of-type(4) {
+  background-image: url(/images/mobile/image-grid.jpg);
+}
+.grid-box:nth-of-type(5) {
+  background-image: url(/images/mobile/image-from-above.jpg);
+}
+.grid-box:nth-of-type(6) {
+  background-image: url(/images/mobile/image-pocket-borealis.jpg);
+}
+.grid-box:nth-of-type(7) {
+  background-image: url(/images/mobile/image-interactive.jpg);
+}
+.grid-box:nth-of-type(8) {
+  background-image: url(/images/mobile/image-fisheye.jpg);
 }
 footer {
   display: flex;
@@ -236,6 +300,8 @@ footer {
   color: #fff;
   gap: 1rem;
   padding-block: 52px;
+  font-family: "Alata", sans-serif;
+  font-weight: 400;
 }
 
 .footer-wrapper {
@@ -260,4 +326,58 @@ ul:nth-of-type(1) {
 ul:nth-of-type(2) {
   display: flex;
   gap: 1rem;
+}
+
+@media screen and (min-width: 860px) {
+  .hero-header {
+    background-image: url(/images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    padding-inline: 10rem;
+    padding-top: 4rem;
+
+    ul {
+      color: #fff;
+    }
+    h1 {
+      color: #fff;
+      font-size: 72px;
+      line-height: 70px;
+      padding: 40px;
+      border: 2px solid white;
+      font-weight: 300;
+      font-family: "Josefin Sans", sans-serif;
+      text-transform: uppercase;
+      max-width: 650px;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10rem;
+    }
+    .menu-btn {
+      display: none;
+    }
+    .menu-desktop {
+      display: block;
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        font-family: "Alata", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        li {
+          transition: 100ms;
+        }
+
+        li:hover {
+          padding: 3px;
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
 }
