@@ -327,14 +327,32 @@ ul:nth-of-type(2) {
   display: flex;
   gap: 1rem;
 }
+@media screen and (min-width: 650px) {
+  .menu-desktop {
+    display: block;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      font-family: "Alata", sans-serif;
+      font-weight: 400;
+      margin: 0;
+    }
 
-@media screen and (min-width: 860px) {
+}
+.menu-btn {
+  display: none;
+}
+}
+
+@media screen and (min-width: 850px) {
   .hero-header {
-    background-image: url(/images/mobile/image-hero.jpg);
+    background-image: url(/images/desktop/image-hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: right;
     height: 100vh;
-    padding-inline: 10rem;
+    padding-inline: 6rem;
     padding-top: 4rem;
 
     ul {
@@ -379,5 +397,56 @@ ul:nth-of-type(2) {
         }
       }
     }
+  }
+  .grid-container {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 48px;
+    margin-bottom: 34px;
+  
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-transform: uppercase;
+      color: white;
+      max-width: 100px;
+    }
+    .grid-box {
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      background-blend-mode: multiply;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  .grid-box:nth-of-type(1) {
+    background-image: url(/images/desktop/image-deep-earth.jpg);
+  } 
+  .grid-box:nth-of-type(2) {
+    background-image: url(/images/desktop/image-night-arcade.jpg);
+  }
+  .grid-box:nth-of-type(3) {
+    background-image: url(/images/desktop/image-soccer-team.jpg);
+  }
+  .grid-box:nth-of-type(4) {
+    background-image: url(/images/desktop/image-grid.jpg);
+  }
+  .grid-box:nth-of-type(5) {
+    background-image: url(/images/desktop/image-from-above.jpg);
+  }
+  .grid-box:nth-of-type(6) {
+    background-image: url(/images/desktop/image-pocket-borealis.jpg);
+  }
+  .grid-box:nth-of-type(7) {
+    background-image: url(/images/desktop/image-interactive.jpg);
+  }
+  .grid-box:nth-of-type(8) {
+    background-image: url(/images/desktop/image-fisheye.jpg);
   }
 }
