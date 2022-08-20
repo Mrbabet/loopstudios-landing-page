@@ -78,6 +78,15 @@ button {
   font-family: "Alata", sans-serif;
   font-weight: 400;
 }
+
+h2 {
+  font-size: 32px;
+  line-height: 32px;
+}
+p {
+  font-size: 15px;
+  line-height: 25px;
+}
 .hero-header {
   background-image: url(/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
@@ -273,6 +282,15 @@ button {
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.5);
   }
+  .grid-box:hover {
+    background-blend-mode: lighten;
+    background-color: rgba(255, 255, 255, 0.5);
+    h3 {
+      text-transform: uppercase;
+      color: black;
+      max-width: 100px;
+    }
+  }
 }
 
 .grid-box:nth-of-type(1) {
@@ -352,6 +370,9 @@ ul:nth-of-type(2) {
   display: flex;
   gap: 1rem;
 }
+
+// Media Querries
+// Breakpoint 650px
 @media screen and (min-width: 650px) {
   .menu-desktop {
     display: block;
@@ -419,7 +440,21 @@ ul:nth-of-type(2) {
     }
   }
 }
+
+// Breakpoint 850px
 @media screen and (min-width: 850px) {
+  h2 {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  p {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 32px;
+  }
   .hero-header {
     background-image: url(/images/desktop/image-hero.jpg);
     background-repeat: no-repeat;
@@ -478,10 +513,13 @@ ul:nth-of-type(2) {
   .footer-wrapper {
     padding-inline: 6rem;
   }
-  .description {
-    display: grid;
-    flex: 0 1 1;
-    grid-template-columns: 1fr 1fr;
+  .main-wrapper {
+    .description {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 10rem;
+      margin-top: 10rem;
+    }
 
     .img {
       all: unset;
@@ -492,6 +530,12 @@ ul:nth-of-type(2) {
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+  }
+  .Creations {
+    margin-bottom: 10rem;
+    .creations-header {
+      margin-bottom: 4rem;
     }
   }
 
@@ -547,6 +591,8 @@ ul:nth-of-type(2) {
     background-image: url(/images/desktop/image-fisheye.jpg);
   }
 }
+
+// Breakpoint 1288px
 @media screen and (min-width: 1288px) {
   .hero-header {
     background-image: url(/images/desktop/image-hero.jpg);
