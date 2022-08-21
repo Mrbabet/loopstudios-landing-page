@@ -87,6 +87,11 @@ p {
   font-size: 15px;
   line-height: 25px;
 }
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
 .hero-header {
   background-image: url(/images/mobile/image-hero.jpg);
   background-repeat: no-repeat;
@@ -121,11 +126,9 @@ p {
     }
   }
 }
-button {
-  background-color: transparent;
-  outline: 0;
-  border: 0;
-}
+
+// Hamburger menu
+
 .menu-btn {
   position: relative;
   display: flex;
@@ -137,7 +140,6 @@ button {
   transition: all 0.5s ease-in-out;
   z-index: 1001;
 }
-
 .menu-btn-burger,
 .menu-btn-burger::before,
 .menu-btn-burger::after {
@@ -148,7 +150,6 @@ button {
   background-color: white;
   transition: transform ease-in-out 220ms;
 }
-
 .menu-btn-burger::after,
 .menu-btn-burger::before {
   content: "";
@@ -161,6 +162,7 @@ button {
 .menu-btn-burger::before {
   transform: translateY(8px);
 }
+
 .menu-btn.open .menu-btn-burger {
   transform: translateX(-50px);
   background: transparent;
@@ -209,6 +211,9 @@ button {
     }
   }
 }
+
+// Main-section
+
 .main-wrapper {
   margin: 6rem 1.5rem 1.5rem 1.5rem;
   .description {
@@ -254,6 +259,15 @@ button {
   .button-container-desktop {
     display: none;
   }
+
+  .button-container-desktop,
+  .button-container-mobile {
+    button:hover {
+      background-color: black;
+      color: white;
+      cursor: pointer;
+    }
+  }
 }
 .grid-container {
   color: black;
@@ -285,6 +299,8 @@ button {
   .grid-box:hover {
     background-blend-mode: lighten;
     background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+
     h3 {
       text-transform: uppercase;
       color: black;
@@ -503,6 +519,7 @@ ul:nth-of-type(2) {
         li:hover {
           padding: 3px;
           border-bottom: 2px solid white;
+          cursor: pointer;
         }
       }
     }
@@ -564,6 +581,18 @@ ul:nth-of-type(2) {
       padding: 20px;
       background-blend-mode: multiply;
       background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  footer {
+    .flex {
+      li {
+        transition: 100ms;
+      }
+      li:hover {
+        padding: 3px;
+        border-bottom: 2px solid white;
+        cursor: pointer;
+      }
     }
   }
   .grid-box:nth-of-type(1) {
